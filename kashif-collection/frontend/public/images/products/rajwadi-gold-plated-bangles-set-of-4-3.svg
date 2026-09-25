@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="800" height="800" role="img" aria-label="Rajwadi Gold Plated Bangles (Set of 4)">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="40%" r="75%"><stop offset="0" stop-color="#f6f0e5"/><stop offset="1" stop-color="#dfd6c9"/></radialGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#E9D3A6"/><stop offset=".45" stop-color="#C9A46A"/><stop offset="1" stop-color="#9C7A45"/></linearGradient>
+    <linearGradient id="main" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#c59d54"/><stop offset=".6" stop-color="#B8872F"/><stop offset="1" stop-color="#815f21"/></linearGradient>
+    <radialGradient id="sheen" cx="35%" cy="30%" r="60%"><stop offset="0" stop-color="#fff" stop-opacity=".45"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
+    <pattern id="dots" width="40" height="40" patternUnits="userSpaceOnUse"><circle cx="20" cy="20" r="1.6" fill="#C9A46A" opacity=".35"/></pattern>
+  </defs>
+  <rect width="800" height="800" fill="url(#bg)"/>
+  <rect width="800" height="800" fill="url(#dots)"/>
+  <circle cx="400" cy="420" r="300" fill="#fff" opacity=".35"/>
+  <g transform="translate(-200 -200) scale(1.5)">
+        <ellipse cx="400" cy="310" rx="220" ry="70" fill="none" stroke="#B8872F" stroke-width="20"/>
+        <circle cx="620" cy="310" r="5" fill="#fff" opacity=".8"/><circle cx="590.5255888325765" cy="345" r="5" fill="#fff" opacity=".8"/><circle cx="510" cy="370.6217782649107" r="5" fill="#fff" opacity=".8"/><circle cx="400" cy="380" r="5" fill="#fff" opacity=".8"/><circle cx="290.00000000000006" cy="370.6217782649107" r="5" fill="#fff" opacity=".8"/><circle cx="209.47441116742348" cy="345" r="5" fill="#fff" opacity=".8"/><circle cx="180" cy="310" r="5" fill="#fff" opacity=".8"/><circle cx="209.4744111674235" cy="275" r="5" fill="#fff" opacity=".8"/><circle cx="289.9999999999999" cy="249.3782217350893" r="5" fill="#fff" opacity=".8"/><circle cx="399.99999999999994" cy="240" r="5" fill="#fff" opacity=".8"/><circle cx="510" cy="249.3782217350893" r="5" fill="#fff" opacity=".8"/><circle cx="590.5255888325764" cy="275" r="5" fill="#fff" opacity=".8"/>
+        <ellipse cx="400" cy="360" rx="220" ry="70" fill="none" stroke="url(#gold)" stroke-width="26"/>
+        
+        <ellipse cx="400" cy="410" rx="220" ry="70" fill="none" stroke="#B8872F" stroke-width="20"/>
+        <circle cx="620" cy="410" r="5" fill="#fff" opacity=".8"/><circle cx="590.5255888325765" cy="445" r="5" fill="#fff" opacity=".8"/><circle cx="510" cy="470.6217782649107" r="5" fill="#fff" opacity=".8"/><circle cx="400" cy="480" r="5" fill="#fff" opacity=".8"/><circle cx="290.00000000000006" cy="470.6217782649107" r="5" fill="#fff" opacity=".8"/><circle cx="209.47441116742348" cy="445" r="5" fill="#fff" opacity=".8"/><circle cx="180" cy="410" r="5" fill="#fff" opacity=".8"/><circle cx="209.4744111674235" cy="375" r="5" fill="#fff" opacity=".8"/><circle cx="289.9999999999999" cy="349.3782217350893" r="5" fill="#fff" opacity=".8"/><circle cx="399.99999999999994" cy="340" r="5" fill="#fff" opacity=".8"/><circle cx="510" cy="349.3782217350893" r="5" fill="#fff" opacity=".8"/><circle cx="590.5255888325764" cy="375" r="5" fill="#fff" opacity=".8"/>
+        <ellipse cx="400" cy="460" rx="220" ry="70" fill="none" stroke="url(#gold)" stroke-width="26"/>
+        
+        <ellipse cx="400" cy="510" rx="220" ry="70" fill="none" stroke="#B8872F" stroke-width="20"/>
+        <circle cx="620" cy="510" r="5" fill="#fff" opacity=".8"/><circle cx="590.5255888325765" cy="545" r="5" fill="#fff" opacity=".8"/><circle cx="510" cy="570.6217782649107" r="5" fill="#fff" opacity=".8"/><circle cx="400" cy="580" r="5" fill="#fff" opacity=".8"/><circle cx="290.00000000000006" cy="570.6217782649107" r="5" fill="#fff" opacity=".8"/><circle cx="209.47441116742348" cy="545" r="5" fill="#fff" opacity=".8"/><circle cx="180" cy="510" r="5" fill="#fff" opacity=".8"/><circle cx="209.4744111674235" cy="475" r="5" fill="#fff" opacity=".8"/><circle cx="289.9999999999999" cy="449.3782217350893" r="5" fill="#fff" opacity=".8"/><circle cx="399.99999999999994" cy="440" r="5" fill="#fff" opacity=".8"/><circle cx="510" cy="449.3782217350893" r="5" fill="#fff" opacity=".8"/><circle cx="590.5255888325764" cy="475" r="5" fill="#fff" opacity=".8"/></g>
+  <text x="400" y="755" font-family="Georgia,serif" font-size="18" fill="#9C7A45" text-anchor="middle" letter-spacing="8" opacity=".75">KASHIF COLLECTION</text>
+</svg>

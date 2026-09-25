@@ -64,14 +64,14 @@ export async function suggestions(req: Request, res: Response) {
 }
 
 export async function home(_req: Request, res: Response) {
-  const [sections, categories, reviews, offers] = await Promise.all([
+  const [sections, categories, reviews, coupons] = await Promise.all([
     productService.getHomeSections(),
     categoryService.listCategories(),
     reviewService.featuredReviews(6),
     listPublicCoupons(),
   ]);
   cachePublic(res, 60);
-  ok(res, { ...sections, categories, reviews, offers });
+  ok(res, { ...sections, categories, reviews, coupons });
 }
 
 export async function productSlugs(_req: Request, res: Response) {

@@ -8,6 +8,6 @@ export const BUSINESS = {
   country: 'India',
   phone: '+91 90000 00000',
   email: 'support@kashifcollection.in',
-  gstin: 'GSTIN-PENDING',
+  gstin: process.env.BUSINESS_GSTIN || 'Not registered',
   currency: 'INR',
 } as const;

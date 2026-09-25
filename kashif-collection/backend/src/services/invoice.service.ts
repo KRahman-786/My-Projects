@@ -64,13 +64,13 @@ export function renderInvoice(order: InvoiceOrder, out: Writable) {
   const meta: [string, string][] = [
     ['Order No.', order.orderNumber],
     ['Order Date', fmtDate(order.placedAt)],
-    ['Payment', order.paymentMethod === 'COD' ? 'Cash on Delivery' : order.paymentMethod === 'RAZORPAY' ? 'Razorpay (Online)' : 'Card (Stripe)'],
+    ['Payment', order.paymentMethod === 'COD' ? 'COD' : order.paymentMethod === 'RAZORPAY' ? 'Razorpay' : 'Card (Stripe)'],
     ['Payment Status', order.paymentStatus],
     ['Place of Supply', order.shipState],
   ];
   meta.forEach(([k, v], i) => {
-    doc.font('Helvetica').fontSize(8.5).fillColor(MUTED).text(k, left + 380, y + i * 14, { width: 70 });
-    doc.font('Helvetica-Bold').fillColor(INK).text(v, left + 450, y + i * 14, { width: width - 450, align: 'right' });
+    doc.font('Helvetica').fontSize(8.5).fillColor(MUTED).text(k, left + 380, y + i * 14, { width: 66, lineBreak: false });
+    doc.font('Helvetica-Bold').fillColor(INK).text(v, left + 446, y + i * 14, { width: width - 446, align: 'right', lineBreak: false });
   });
 
   // Items table
@@ -80,7 +80,7 @@ export function renderInvoice(order: InvoiceOrder, out: Writable) {
     { label: 'Item', w: 170, align: 'left' as const },
     { label: 'SKU', w: 72, align: 'left' as const },
     { label: 'Qty', w: 28, align: 'right' as const },
-    { label: 'Price', w: 62, align: 'right' as const },
+    { label: 'MRP', w: 62, align: 'right' as const },
     { label: 'Discount', w: 55, align: 'right' as const },
     { label: 'GST', w: 50, align: 'right' as const },
     { label: 'Amount', w: width - 455, align: 'right' as const },
@@ -157,11 +157,12 @@ export function renderInvoice(order: InvoiceOrder, out: Writable) {
     { width: 250, lineGap: 1.5 },
   );
 
-  // Footer
+  // Footer (drawn inside the bottom margin, so disable the margin to avoid PDFKit adding a page)
+  doc.page.margins.bottom = 0;
   const fy = doc.page.height - 60;
   doc.moveTo(left, fy).lineTo(right, fy).strokeColor(GOLD).lineWidth(1).stroke();
-  doc.font('Times-Italic').fontSize(11).fillColor(PLUM).text('Thank you for shopping with Kashif Collection', left, fy + 10, { width, align: 'center' });
-  doc.font('Helvetica').fontSize(7.5).fillColor(MUTED).text(`${BUSINESS.addressLines.join(', ')}  ·  ${BUSINESS.email}`, left, fy + 28, { width, align: 'center' });
+  doc.font('Times-Italic').fontSize(11).fillColor(PLUM).text('Thank you for shopping with Kashif Collection', left, fy + 10, { width, align: 'center', lineBreak: false });
+  doc.font('Helvetica').fontSize(7.5).fillColor(MUTED).text(`${BUSINESS.addressLines.join(', ')}  ·  ${BUSINESS.email}`, left, fy + 28, { width, align: 'center', lineBreak: false });
 
   doc.end();
 }

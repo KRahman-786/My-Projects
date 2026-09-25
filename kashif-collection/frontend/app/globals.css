@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    -webkit-tap-highlight-color: transparent;
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-ivory font-sans text-ink antialiased;
+  }
+  h1, h2, h3 {
+    @apply text-balance;
+  }
+  ::selection {
+    @apply bg-plum-200 text-plum-900;
+  }
+  :focus-visible {
+    @apply outline-none ring-2 ring-plum-400 ring-offset-2 ring-offset-ivory;
+  }
+}
+
+@layer components {
+  .eyebrow {
+    @apply text-[11px] font-semibold uppercase tracking-[0.28em] text-gold-600;
+  }
+  .section-title {
+    @apply font-display text-3xl font-semibold leading-tight text-ink md:text-[42px];
+  }
+  .card {
+    @apply rounded-2xl border border-line/70 bg-white shadow-card;
+  }
+  .no-scrollbar {
+    scrollbar-width: none;
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .prose-kc {
+    @apply prose prose-sm max-w-none prose-headings:font-display prose-headings:font-semibold prose-headings:text-ink prose-p:text-ink-soft prose-li:text-ink-soft prose-a:text-plum-700 prose-strong:text-ink md:prose-base;
+  }
+}
+
+@keyframes shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

@@ -38,6 +38,11 @@ export async function resetPassword(req: Request, res: Response) {
   ok(res, null, { message: 'Password updated. Please log in with your new password.' });
 }
 
+export async function session(req: Request, res: Response) {
+  res.setHeader('Cache-Control', 'private, no-store');
+  ok(res, { user: req.user ? await authService.getProfile(req.user.id) : null });
+}
+
 export async function me(req: Request, res: Response) {
   ok(res, { user: await authService.getProfile(currentUser(req).id) });
 }
