@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="800" height="800" role="img" aria-label="Liquid Wing Eyeliner">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="40%" r="75%"><stop offset="0" stop-color="#f4eef5"/><stop offset="1" stop-color="#dcd4dd"/></radialGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#E9D3A6"/><stop offset=".45" stop-color="#C9A46A"/><stop offset="1" stop-color="#9C7A45"/></linearGradient>
+    <linearGradient id="main" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#51494d"/><stop offset=".6" stop-color="#2B2126"/><stop offset="1" stop-color="#1e171b"/></linearGradient>
+    <radialGradient id="sheen" cx="35%" cy="30%" r="60%"><stop offset="0" stop-color="#fff" stop-opacity=".45"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
+    <pattern id="dots" width="40" height="40" patternUnits="userSpaceOnUse"><circle cx="20" cy="20" r="1.6" fill="#C9A46A" opacity=".35"/></pattern>
+  </defs>
+  <rect width="800" height="800" fill="url(#bg)"/>
+  <rect width="800" height="800" fill="url(#dots)"/>
+  <circle cx="400" cy="420" r="300" fill="#fff" opacity=".35"/>
+  <g transform="">
+      <g transform="translate(400 400) rotate(-35)">
+        <rect x="-26" y="-250" width="52" height="400" rx="26" fill="#1c1719"/>
+        <rect x="-26" y="-90" width="52" height="16" fill="url(#gold)"/>
+        <rect x="-26" y="150" width="52" height="110" rx="20" fill="url(#gold)"/>
+        <path d="M-26 -250 Q0 -300 26 -250 Z" fill="#2B2126"/>
+        <rect x="-14" y="-240" width="8" height="370" rx="4" fill="#fff" opacity=".12"/>
+      </g>
+      <path d="M180 620 C 300 560, 460 560, 620 610" stroke="#2B2126" stroke-width="18" fill="none" stroke-linecap="round" opacity=".85"/></g>
+  <text x="400" y="755" font-family="Georgia,serif" font-size="18" fill="#9C7A45" text-anchor="middle" letter-spacing="8" opacity=".75">KASHIF COLLECTION</text>
+</svg>

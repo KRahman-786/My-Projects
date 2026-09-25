@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="800" height="800" role="img" aria-label="Adjustable AD Cocktail Ring">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="40%" r="75%"><stop offset="0" stop-color="#e9ebee"/><stop offset="1" stop-color="#ced1d5"/></radialGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#E9D3A6"/><stop offset=".45" stop-color="#C9A46A"/><stop offset="1" stop-color="#9C7A45"/></linearGradient>
+    <linearGradient id="main" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#7986a3"/><stop offset=".6" stop-color="#5B6C8F"/><stop offset="1" stop-color="#404c64"/></linearGradient>
+    <radialGradient id="sheen" cx="35%" cy="30%" r="60%"><stop offset="0" stop-color="#fff" stop-opacity=".45"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
+    <pattern id="dots" width="40" height="40" patternUnits="userSpaceOnUse"><circle cx="20" cy="20" r="1.6" fill="#C9A46A" opacity=".35"/></pattern>
+  </defs>
+  <rect width="800" height="800" fill="url(#bg)"/>
+  <rect width="800" height="800" fill="url(#dots)"/>
+  <circle cx="400" cy="420" r="300" fill="#fff" opacity=".35"/>
+  <g transform="translate(400 400) scale(-0.92 0.92) translate(-400 -400)">
+      <ellipse cx="400" cy="640" rx="170" ry="26" fill="#000" opacity=".07"/>
+      <ellipse cx="400" cy="480" rx="160" ry="150" fill="none" stroke="url(#gold)" stroke-width="34"/>
+      <g transform="translate(400 300)">
+        <circle cx="88" cy="0" r="16" fill="#F4F6FA" stroke="#B8C0CC"/><circle cx="76.21023553303061" cy="34.99999999999999" r="16" fill="#F4F6FA" stroke="#B8C0CC"/><circle cx="44.00000000000001" cy="60.6217782649107" r="16" fill="#F4F6FA" stroke="#B8C0CC"/><circle cx="5.3884459162483544e-15" cy="70" r="16" fill="#F4F6FA" stroke="#B8C0CC"/><circle cx="-43.99999999999998" cy="60.62177826491071" r="16" fill="#F4F6FA" stroke="#B8C0CC"/><circle cx="-76.21023553303061" cy="34.99999999999999" r="16" fill="#F4F6FA" stroke="#B8C0CC"/><circle cx="-88" cy="8.572527594031473e-15" r="16" fill="#F4F6FA" stroke="#B8C0CC"/><circle cx="-76.2102355330306" cy="-35.00000000000001" r="16" fill="#F4F6FA" stroke="#B8C0CC"/><circle cx="-44.00000000000004" cy="-60.621778264910695" r="16" fill="#F4F6FA" stroke="#B8C0CC"/><circle cx="-1.6165337748745062e-14" cy="-70" r="16" fill="#F4F6FA" stroke="#B8C0CC"/><circle cx="44.00000000000001" cy="-60.6217782649107" r="16" fill="#F4F6FA" stroke="#B8C0CC"/><circle cx="76.21023553303058" cy="-35.00000000000003" r="16" fill="#F4F6FA" stroke="#B8C0CC"/>
+        <path d="M-60 0 L0 -70 L60 0 L0 70 Z" fill="#5B6C8F"/>
+        <path d="M-60 0 L0 -70 L0 70 Z" fill="#3b465d" opacity=".4"/>
+        <path d="M-20 -20 L0 -45" stroke="#fff" stroke-width="6" stroke-linecap="round" opacity=".7"/>
+      </g></g>
+  <text x="400" y="755" font-family="Georgia,serif" font-size="18" fill="#9C7A45" text-anchor="middle" letter-spacing="8" opacity=".75">KASHIF COLLECTION</text>
+</svg>
