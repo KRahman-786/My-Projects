@@ -19,6 +19,8 @@ const schema = z.object({
   /** Public base URL of this API (used for locally stored uploads) */
   API_PUBLIC_URL: z.string().url().default('http://localhost:4000'),
   TRUST_PROXY: z.coerce.number().int().min(0).default(1),
+  /** Shared secret proving a request came through our Next.js proxy (enables its X-Client-IP header). */
+  PROXY_SHARED_SECRET: optional,
 
   RAZORPAY_KEY_ID: optional,
   RAZORPAY_KEY_SECRET: optional,

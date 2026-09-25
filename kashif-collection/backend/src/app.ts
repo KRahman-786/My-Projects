@@ -9,6 +9,7 @@ import { apiRouter } from './routes';
 import { errorHandler, notFoundHandler } from './middleware/errorHandler';
 import { csrfProtection, CLIENT_HEADER } from './middleware/csrf';
 import { apiLimiter } from './middleware/rateLimit';
+import { clientIp } from './middleware/clientIp';
 import { UPLOAD_DIR } from './services/storage.service';
 
 export function createApp() {
@@ -51,7 +52,7 @@ export function createApp() {
 
   if (!isProd) app.use('/uploads', express.static(UPLOAD_DIR, { maxAge: '7d', fallthrough: false }));
 
-  app.use('/api', apiLimiter, csrfProtection, apiRouter);
+  app.use('/api', clientIp, apiLimiter, csrfProtection, apiRouter);
   app.get('/', (_req, res) => res.json({ success: true, data: { name: 'Kashif Collection API', docs: '/api/health' } }));
 
   app.use(notFoundHandler);

@@ -1,7 +1,5 @@
 import type { NextConfig } from 'next';
 
-const API_INTERNAL_URL = process.env.API_INTERNAL_URL ?? 'http://localhost:4000';
-
 const securityHeaders = [
   { key: 'X-Content-Type-Options', value: 'nosniff' },
   { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
@@ -19,10 +17,7 @@ const nextConfig: NextConfig = {
       { protocol: 'http', hostname: 'localhost', port: '4000' },
     ],
   },
-  // The browser talks to the API through this same-origin proxy so the session cookie is first-party.
-  async rewrites() {
-    return [{ source: '/api/:path*', destination: `${API_INTERNAL_URL}/api/:path*` }];
-  },
+  // The browser reaches the API through the same-origin proxy in app/api/[...path]/route.ts.
   async headers() {
     return [
       { source: '/(.*)', headers: securityHeaders },

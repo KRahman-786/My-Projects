@@ -1,3 +1,4 @@
+import { toJsonLd } from '@/lib/jsonld';
 import type { Metadata } from 'next';
 import { ChevronDown } from 'lucide-react';
 import { Breadcrumbs } from '@/components/ui/Breadcrumbs';
@@ -42,7 +43,7 @@ export default function FaqPage() {
           </details>
         ))}
       </div>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: toJsonLd(jsonLd) }} />
     </div>
   );
 }

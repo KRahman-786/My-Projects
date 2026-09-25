@@ -1,0 +1,20 @@
+# Local PostgreSQL for development: `docker compose up -d`
+services:
+  postgres:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: kashif
+      POSTGRES_PASSWORD: kashif_dev
+      POSTGRES_DB: kashif_collection
+    ports:
+      - '5432:5432'
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./backend/prisma/docker-init.sql:/docker-entrypoint-initdb.d/init.sql:ro
+    healthcheck:
+      test: ['CMD-SHELL', 'pg_isready -U kashif -d kashif_collection']
+      interval: 5s
+      retries: 10
+volumes:
+  pgdata:

@@ -10,6 +10,8 @@ declare global {
     }
     interface Request {
       user?: AuthUser;
+      /** Real visitor IP (see middleware/clientIp) */
+      clientIp?: string;
       /** Raw request body, captured only for webhook routes (signature verification). */
       rawBody?: Buffer;
     }

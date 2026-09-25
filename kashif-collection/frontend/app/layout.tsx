@@ -1,3 +1,4 @@
+import { toJsonLd } from '@/lib/jsonld';
 import type { Metadata, Viewport } from 'next';
 import { Cormorant_Garamond, Manrope } from 'next/font/google';
 import { Providers } from '@/components/providers/Providers';
@@ -49,7 +50,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en-IN" className={`${display.variable} ${sans.variable}`}>
       <body className="min-h-screen">
         <Providers>{children}</Providers>
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(orgJsonLd) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: toJsonLd(orgJsonLd) }} />
       </body>
     </html>
   );

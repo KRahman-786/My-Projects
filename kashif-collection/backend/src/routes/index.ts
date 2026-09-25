@@ -30,11 +30,19 @@ import { checkPincode } from '../services/shipping/shipping.service';
 import { submitContactMessage } from '../services/contact.service';
 import { uploadImage } from '../services/storage.service';
 import { AppError } from '../utils/AppError';
+import { prisma } from '../config/prisma';
 import { created, ok } from '../utils/response';
 
 export const apiRouter = Router();
 
-apiRouter.get('/health', (_req, res) => ok(res, { status: 'ok', time: new Date().toISOString() }));
+apiRouter.get('/health', async (_req: Request, res: Response) => {
+  try {
+    await prisma.$queryRaw`SELECT 1`;
+    ok(res, { status: 'ok', database: 'up', time: new Date().toISOString() });
+  } catch {
+    res.status(503).json({ success: false, message: 'Database unavailable', errorCode: 'DB_UNAVAILABLE' });
+  }
+});
 
 // Auth & profile
 apiRouter.use('/auth', authRouter);

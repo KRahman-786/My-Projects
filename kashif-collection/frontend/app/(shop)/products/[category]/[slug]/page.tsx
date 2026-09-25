@@ -1,3 +1,4 @@
+import { toJsonLd } from '@/lib/jsonld';
 import type { Metadata } from 'next';
 import { notFound, permanentRedirect } from 'next/navigation';
 import { catalog } from '@/services/catalog';
@@ -94,7 +95,7 @@ export default async function ProductPage({ params }: { params: Params }) {
         </section>
       )}
       <RecentlyViewed excludeId={product.id} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: toJsonLd(jsonLd) }} />
     </div>
   );
 }
